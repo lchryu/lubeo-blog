@@ -64,16 +64,21 @@
 //   );
 // }
 
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-black">
-      <div className="text-center p-8 bg-white dark:bg-zinc-900 rounded-lg shadow">
-        <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">
-          Hello Lubeo
-        </h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-          Hello guys 👋 — This is a simple page.
-        </p>
+    <main className="mx-auto max-w-2xl p-8">
+      <h1 className="text-3xl font-bold">Lubeo Blog — it works! 🚀</h1>
+      <p className="mt-2 opacity-80">Tuần 2: bài viết đầu tiên bằng MDX.</p>
+
+      <div className="mt-6">
+        <Link
+          href="/blog/hello-world"
+          className="underline underline-offset-4 hover:no-underline"
+        >
+          Đọc bài: Hello World 👋
+        </Link>
       </div>
     </main>
   );
